@@ -40,7 +40,7 @@ public class Vehiculo {
 
     }
 
-    //Getters y Setters
+
 
     public int getID_Auto() {
         return ID_Auto;
