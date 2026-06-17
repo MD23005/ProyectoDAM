@@ -112,23 +112,28 @@ public class VehiculoAdapter  extends
         @Override
         public void onClick(View view) {
             int itemPresionado = getAdapterPosition();
-//            int itemPresionado=getAbsoluteAdapterPosition();
-            String _marca = marca.getText().toString();
-            String _modelo = modelo.getText().toString();
-            String _año = año.getText().toString();
-            String _placa = placa.getText().toString();
-            String _tipo_vehiculo = tipo_vehiculo.getText().toString();
-            String _precio = precio.getText().toString();
-            String _estado = estado.getText().toString();
-            //String _foto = foto.getText().toString();
-            Vehiculo vehiculo = lista.get(itemPresionado);
-            String _foto = vehiculo.foto != null ? vehiculo.foto : "";
-            miClick.clickItem(_marca, _modelo, _año, _placa, _tipo_vehiculo, _precio, _estado, _foto);
+
+            if(itemPresionado != RecyclerView.NO_POSITION){
+                Vehiculo vehiculo = lista.get(itemPresionado);
+
+                miClick.clickItem(vehiculo);
+            }
+//            String _marca = marca.getText().toString();
+//            String _modelo = modelo.getText().toString();
+//            String _año = año.getText().toString();
+//            String _placa = placa.getText().toString();
+//            String _tipo_vehiculo = tipo_vehiculo.getText().toString();
+//            String _precio = precio.getText().toString();
+//            String _estado = estado.getText().toString();
+//            //String _foto = foto.getText().toString();
+//            Vehiculo vehiculo = lista.get(itemPresionado);
+//            String _foto = vehiculo.foto != null ? vehiculo.foto : "";
+//            miClick.clickItem(_marca, _modelo, _año, _placa, _tipo_vehiculo, _precio, _estado, _foto);
         }
     }
 
     public interface clickLista {
-        void clickItem(String marca, String modelo, String año, String placa, String tipo_Vehiculo, String precio, String estado, String foto);
+        void clickItem(Vehiculo vehiculo);
     }
     public interface clickEliminar {
         void onEliminar(Vehiculo vehiculo, int position);

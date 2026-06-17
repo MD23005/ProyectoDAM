@@ -1,5 +1,6 @@
 package com.example.crudapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.example.crudapplication.data.AppDB;
 import com.example.crudapplication.entities.Vehiculo;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VehiculosFragment extends Fragment {
@@ -76,7 +78,7 @@ public class VehiculosFragment extends Fragment {
             lista = db.vehiculoDAO().obtenerTodos();
 
             if (lista == null) {
-                lista = new java.util.ArrayList<>();
+                lista = new ArrayList<>();
             }
 
             if (getActivity() != null) {
@@ -87,10 +89,12 @@ public class VehiculosFragment extends Fragment {
                                 lista,
                                 requireContext(),
 
-                                (marca, modelo, año, placa, tipo_vehiculo, precio, estado, foto) -> {
-                                    Toast.makeText(getContext(),
-                                            marca + " " + modelo,
-                                            Toast.LENGTH_SHORT).show();
+                                (vehiculo) -> {
+                                    Intent intent = new Intent(requireContext(), DetallesVehiculoActivity.class);
+
+                                    intent.putExtra("vehiculo", vehiculo);
+
+                                    startActivity(intent);
                                 },
 
                                 (vehiculo, position) -> {
