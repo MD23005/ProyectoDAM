@@ -7,12 +7,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.crudapplication.entities.Cliente;
+import android.content.SharedPreferences;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class DetallesClienteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.detalles_cliente);
+
+        SharedPreferences prefs =
+                getSharedPreferences("config", MODE_PRIVATE);
+
+        boolean modoOscuro =
+                prefs.getBoolean("modo_oscuro", true);
+
+        AppCompatDelegate.setDefaultNightMode(
+                modoOscuro
+                        ? AppCompatDelegate.MODE_NIGHT_YES
+                        : AppCompatDelegate.MODE_NIGHT_NO
+        );
+
+
         setContentView(R.layout.detalles_cliente);
 
         Toolbar toolbar = findViewById(R.id.toolbarDetalleCliente);

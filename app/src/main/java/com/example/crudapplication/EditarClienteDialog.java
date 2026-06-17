@@ -56,8 +56,7 @@ public class EditarClienteDialog extends DialogFragment {
         AlertDialog.Builder builder =
                 new AlertDialog.Builder(requireContext());
 
-        builder.setView(vista)
-                .setTitle("Editar Cliente");
+        builder.setView(vista);
 
         AlertDialog dialog = builder.create();
 
