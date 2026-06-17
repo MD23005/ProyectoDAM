@@ -15,7 +15,7 @@ import com.example.crudapplication.entities.Cliente;
 import com.example.crudapplication.entities.Usuario;
 import com.example.crudapplication.entities.Vehiculo;
 
-@Database(entities ={Vehiculo.class, AlquilarVehiculo.class, Cliente.class, Usuario.class},version = 7)
+@Database(entities ={Vehiculo.class, AlquilarVehiculo.class, Cliente.class, Usuario.class},version = 8)
 public abstract class AppDB
         extends RoomDatabase {
     private static AppDB instancia;

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#0B1320">
 
-    <!-- Logo o título -->
+    <!-- Logo  -->
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="120dp"
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/tvTitulo"
         android:layout_marginBottom="16dp"/>
-    
+
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
