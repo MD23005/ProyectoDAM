@@ -1,5 +1,6 @@
 package com.example.crudapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -123,13 +124,13 @@ public class ClientesFragment extends Fragment {
                             requireContext(),
 
                             // Detalle
-                            (nombre, dui, telefono, correoElectronico) -> {
+                            (cliente) -> {
 
-                                Toast.makeText(
-                                        getContext(),
-                                        nombre + "\n" + telefono,
-                                        Toast.LENGTH_SHORT
-                                ).show();
+                                Intent intent = new Intent(requireContext(), DetallesClienteActivity.class);
+
+                                intent.putExtra("cliente", cliente);
+
+                                startActivity(intent);
                             },
 
                             // Eliminar

@@ -93,17 +93,16 @@ public class ClienteAdapter extends RecyclerView.Adapter<ClienteAdapter.ClienteV
         public void onClick(View view) {
             int itemPresionado = getAdapterPosition();
 
-            String _nombre = nombre.getText().toString();
-            String _dui = dui.getText().toString();
-            String _telefono = telefono.getText().toString();
-            String _correoElectronico = correoElectronico.getText().toString();
+            if(itemPresionado != RecyclerView.NO_POSITION){
+                Cliente cliente = lista.get(itemPresionado);
+                miClick.clickItem(cliente);
+            }
 
-            miClick.clickItem(_nombre, _dui, _telefono, _correoElectronico);
         }
     }
 
     public interface clickLista {
-        void clickItem(String nombre, String dui, String telefono, String correoElectronico);
+        void clickItem(Cliente cliente);
     }
 
     public interface clickEliminar {
