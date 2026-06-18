@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -30,6 +31,8 @@ public class EditarVehiculoDialog extends DialogFragment {
     Spinner spinnerTipoVehiculo, spinnerEstado;
     ImageView imgFoto;
     Button btnSeleccionarFoto;
+    private Button btnGuardar, btnCancelar;
+    private TextView tvTituloDialogo;
     AppDB db;
     String rutaFoto = "";
     Vehiculo vehiculo;
@@ -63,6 +66,7 @@ public class EditarVehiculoDialog extends DialogFragment {
         db = AppDB.getInstance(requireContext());
 
         // Vincular vistas
+        tvTituloDialogo = vista.findViewById(R.id.tvTituloDialogo);
         imgFoto = vista.findViewById(R.id.imgFoto);
         etMarca = vista.findViewById(R.id.etMarca);
         etModelo = vista.findViewById(R.id.etModelo);
@@ -72,6 +76,13 @@ public class EditarVehiculoDialog extends DialogFragment {
         btnSeleccionarFoto = vista.findViewById(R.id.btnSeleccionarFoto);
         spinnerTipoVehiculo = vista.findViewById(R.id.spinnerTipoVehiculo);
         spinnerEstado = vista.findViewById(R.id.spinnerEstado);
+        btnGuardar = vista.findViewById(R.id.btnGuardar);
+
+        // Cambiar el texto del título y del botón para que coincida con la acción
+        if (tvTituloDialogo != null) {
+            tvTituloDialogo.setText("Editar Vehículo");
+        }
+        btnGuardar.setText("Actualizar");
 
         String[] tipos = {"Sedán", "SUV", "Pick-up", "Camión", "Van", "Motocicleta", "Deportivo", "Exotico"};
         ArrayAdapter<String> adapterTipo = new ArrayAdapter<>(requireContext(),
@@ -92,8 +103,7 @@ public class EditarVehiculoDialog extends DialogFragment {
         );
 
         AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
-        builder.setView(vista)
-                .setTitle("Editar Vehículo");
+        builder.setView(vista);
 
         AlertDialog dialog = builder.create();;
 

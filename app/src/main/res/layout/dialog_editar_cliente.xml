@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#1A2332">
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Editar Cliente"
-            android:textColor="@android:color/white"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"/>
@@ -29,7 +29,7 @@
             android:id="@+id/etNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            android:textColor="@color/text_primary"
             android:textColorHint="#4F5A6D"
             android:layout_marginBottom="12dp"/>
 
@@ -43,7 +43,7 @@
             android:id="@+id/etDui"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            android:textColor="@color/text_primary"
             android:textColorHint="#4F5A6D"
             android:layout_marginBottom="12dp"/>
 
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
-            android:textColor="@android:color/white"
+            android:textColor="@color/text_primary"
             android:textColorHint="#4F5A6D"
             android:layout_marginBottom="12dp"/>
 
@@ -73,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:textColor="@android:color/white"
+            android:textColor="@color/text_primary"
             android:textColorHint="#4F5A6D"
             android:layout_marginBottom="20dp"/>
 

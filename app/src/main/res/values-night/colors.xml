@@ -7,16 +7,15 @@
     <color name="secondary">#29B6F6</color>
     <color name="accent">#BB86FC</color>
 
-
-    <color name="background">#F4F7FB</color>
+    <color name="background">#0B1320</color>
     <color name="card_background">#1A2332</color>
 
-    <color name="text_primary">#1F2937</color>
-    <color name="text_secondary">#505256</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#9AA4B2</color>
 
-    <color name="primary">#1976D2</color>
+    <color name="primary">#29B6F6</color>
     <color name="fab_color">#2196F3</color>
 
-    <color name="success">#2E7D32</color>
-    <color name="warning">#EF6C00</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFA726</color>
 </resources>

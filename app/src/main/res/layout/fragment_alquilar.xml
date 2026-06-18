@@ -4,7 +4,7 @@
     xmlns:tools="http://tools.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B1320"
+    android:background="@color/background"
     tools:context=".AlquileresFragment">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:text="Historial de Alquileres"
-        android:textColor="@android:color/white"
+        android:textColor="@color/text_primary"
         android:textSize="24sp"
         android:textStyle="bold" />
 

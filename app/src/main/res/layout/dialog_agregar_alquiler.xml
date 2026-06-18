@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@color/background"
     android:padding="20dp">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:text="Registrar Alquiler"
-        android:textColor="@android:color/black"
+        android:textColor="@color/text_primary"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -105,12 +106,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancelar"
+            android:textColor="#FF5252"
             android:layout_marginEnd="8dp"/>
 
         <Button
             android:id="@+id/btnGuardarAlquiler"
             android:layout_width="wrap_content"
+            android:backgroundTint="#2196F3"
             android:layout_height="wrap_content"
+
             android:text="Guardar" />
     </LinearLayout>
 
