@@ -51,7 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 selectedFragment = new AlquilarFragment();
             } else if (itemId == R.id.nav_clientes) {
                 selectedFragment = new ClientesFragment();
+            }else if (itemId == R.id.nav_usuario) {
+                selectedFragment = new UsuarioFragment();
             }
+
 
             if (selectedFragment != null) {
                 reemplazarFragmento(selectedFragment);

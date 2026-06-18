@@ -15,4 +15,9 @@
         android:id="@+id/nav_alquilar"
         android:icon="@drawable/baseline_event_note_24"
         android:title="ALQUILERES" />
+
+    <item
+        android:id="@+id/nav_usuario"
+        android:icon="@drawable/ic_usuario"
+        android:title="USUARIO" />
 </menu>

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CRUDApplication">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,13 +21,8 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".DetallesVehiculoActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".DetallesClienteActivity"
-            android:exported="false" />
+        <activity android:name=".RegistroActivity"/>
+        <activity android:name=".MainActivity"/>
 
     </application>
 
