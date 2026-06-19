@@ -23,7 +23,8 @@
 
         <activity android:name=".RegistroActivity"/>
         <activity android:name=".MainActivity"/>
-
+        <activity android:name=".DetallesVehiculoActivity" android:exported="false" />
+        <activity android:name=".DetallesClienteActivity" android:exported="false" />
     </application>
 
 </manifest>

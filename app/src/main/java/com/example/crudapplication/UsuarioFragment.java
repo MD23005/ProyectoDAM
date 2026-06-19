@@ -25,15 +25,15 @@ public class UsuarioFragment extends Fragment {
                 .getSharedPreferences(LoginActivity.PREFS_NAME, MODE_PRIVATE);
 
         // Switch tema oscuro/claro
-        Switch switchTema = vista.findViewById(R.id.switchTema);
-        int temaActual = prefs.getInt(LoginActivity.KEY_TEMA, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
-        switchTema.setChecked(temaActual == AppCompatDelegate.MODE_NIGHT_YES);
-
-        switchTema.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            int nuevoTema = isChecked ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO;
-            prefs.edit().putInt(LoginActivity.KEY_TEMA, nuevoTema).apply();
-            AppCompatDelegate.setDefaultNightMode(nuevoTema);
-        });
+//        Switch switchTema = vista.findViewById(R.id.switchTema);
+//        int temaActual = prefs.getInt(LoginActivity.KEY_TEMA, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+//        switchTema.setChecked(temaActual == AppCompatDelegate.MODE_NIGHT_YES);
+//
+//        switchTema.setOnCheckedChangeListener((buttonView, isChecked) -> {
+//            int nuevoTema = isChecked ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO;
+//            prefs.edit().putInt(LoginActivity.KEY_TEMA, nuevoTema).apply();
+//            AppCompatDelegate.setDefaultNightMode(nuevoTema);
+//        });
 
         // Botón cerrar sesión
         Button btnCerrarSesion = vista.findViewById(R.id.btnCerrarSesion);

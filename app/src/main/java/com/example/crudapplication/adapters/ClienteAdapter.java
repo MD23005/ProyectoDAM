@@ -91,7 +91,7 @@ public class ClienteAdapter extends RecyclerView.Adapter<ClienteAdapter.ClienteV
 
         @Override
         public void onClick(View view) {
-            int itemPresionado = getAdapterPosition();
+            int itemPresionado = getBindingAdapterPosition();
 
             if(itemPresionado != RecyclerView.NO_POSITION){
                 Cliente cliente = lista.get(itemPresionado);

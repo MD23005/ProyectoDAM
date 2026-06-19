@@ -111,7 +111,7 @@ public class VehiculoAdapter  extends
 
         @Override
         public void onClick(View view) {
-            int itemPresionado = getAdapterPosition();
+            int itemPresionado = getBindingAdapterPosition();
 
             if(itemPresionado != RecyclerView.NO_POSITION){
                 Vehiculo vehiculo = lista.get(itemPresionado);
