@@ -44,7 +44,13 @@ public interface VehiculoDAO {
     void liberarVehiculosVencidos(String fechaActual);
 
     @Query("UPDATE Vehiculo SET Estado = CASE " +
+            // 1. Si está en rango de alquiler, pasa a Alquilado
             "WHEN ID_Auto IN (SELECT ID_Auto FROM AlquilarVehiculo WHERE :fechaActual BETWEEN Fecha_Inicio AND Fecha_Fin) THEN 'Alquilado' " +
+
+            // 2. Si actualmente está en mantenimiento o no disponible, mantiene su estado
+            "WHEN Estado IN ('En mantenimiento', 'No disponible') THEN Estado " +
+
+            // 3. Si no está alquilado ni bloqueado, queda libre
             "ELSE 'Disponible' " +
             "END")
     void actualizarEstadosVehiculos(String fechaActual);
