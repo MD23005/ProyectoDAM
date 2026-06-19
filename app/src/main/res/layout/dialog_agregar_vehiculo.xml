@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ej: Toyota"
-        android:textColor="@android:color/white"
+        android:textColor="@color/text_primary"
         android:textColorHint="#4F5A6D"
         android:layout_marginBottom="12dp"/>
 
@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ej: Corolla"
-        android:textColor="@android:color/white"
+        android:textColor="@color/text_primary"
         android:textColorHint="#4F5A6D"
         android:layout_marginBottom="12dp"/>
 
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:hint="Ej: 2022"
         android:inputType="number"
-        android:textColor="@android:color/white"
+        android:textColor="@color/text_primary"
         android:textColorHint="#4F5A6D"
         android:layout_marginBottom="12dp"/>
 
@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ej: P-123456"
-        android:textColor="@android:color/white"
+        android:textColor="@color/text_primary"
         android:textColorHint="#4F5A6D"
         android:layout_marginBottom="12dp"/>
 
@@ -82,7 +82,7 @@
         android:id="@+id/spinnerTipoVehiculo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
+        android:textColor="@color/text_primary"
         android:textColorHint="#4F5A6D"
         android:layout_marginBottom="12dp"/>
 
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:hint="Ej: 25"
         android:inputType="numberDecimal"
-        android:textColor="@android:color/white"
+        android:textColor="@color/text_primary"
         android:textColorHint="#4F5A6D"
         android:layout_marginBottom="12dp"/>
 
