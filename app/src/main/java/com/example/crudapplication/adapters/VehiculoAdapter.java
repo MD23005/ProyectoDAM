@@ -141,6 +141,15 @@ public class VehiculoAdapter  extends
     public interface clickEditar {
         void onEditar(Vehiculo vehiculo);
     }
+    
+    public void eliminarVehiculo(Vehiculo vehiculo) {
+
+        lista.remove(vehiculo);
+        listaCompleta.remove(vehiculo);
+
+        notifyDataSetChanged();
+    }
+
 
     List<Vehiculo> listaCompleta; // ← nueva variable
 

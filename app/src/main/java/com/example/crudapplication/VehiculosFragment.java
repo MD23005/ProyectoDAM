@@ -118,8 +118,7 @@ public class VehiculosFragment extends Fragment {
                                                                     db.vehiculoDAO().eliminar(vehiculo);
                                                                     if (getActivity() != null) {
                                                                         getActivity().runOnUiThread(() -> {
-                                                                            lista.remove(position);
-                                                                            adapter.notifyItemRemoved(position);
+                                                                            adapter.eliminarVehiculo(vehiculo);
                                                                             Toast.makeText(getContext(),
                                                                                     "Vehículo eliminado",
                                                                                     Toast.LENGTH_SHORT).show();
