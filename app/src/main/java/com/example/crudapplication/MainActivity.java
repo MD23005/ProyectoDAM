@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
                             : AppCompatDelegate.MODE_NIGHT_NO
             );
 
-            recreate();
-
             return true;
         }
 
@@ -59,17 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SharedPreferences prefs =
-                getSharedPreferences("config", MODE_PRIVATE);
 
-        boolean modoOscuro =
-                prefs.getBoolean("modo_oscuro", true);
-
-        AppCompatDelegate.setDefaultNightMode(
-                modoOscuro
-                        ? AppCompatDelegate.MODE_NIGHT_YES
-                        : AppCompatDelegate.MODE_NIGHT_NO
-        );
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
